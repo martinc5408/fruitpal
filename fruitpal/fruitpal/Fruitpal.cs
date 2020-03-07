@@ -1,6 +1,8 @@
 ﻿using fruitpal.Constant;
+using fruitpal.DataAccess;
 using fruitpal.Logic;
 using fruitpal.Model;
+using fruitpal.Services;
 using System;
 using System.Collections.Generic;
 
@@ -30,7 +32,7 @@ namespace fruitpal
                 return 1;
             }
 
-            ICommodityLogic<int, int, List<CostResult>> fruitCommodityLogic = new FruitCommodityLogic();
+            ICommodityLogic<int, int, List<CostResult>> fruitCommodityLogic = new FruitCommodityLogic(new CountryCommodityData(), new CostCalculatorService());
 
             //Call orchestrating business logic and write results
             List<CostResult> fruitCommodities = fruitCommodityLogic.GetCommodityPrices(commodity, price, quantity);

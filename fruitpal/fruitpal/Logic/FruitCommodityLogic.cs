@@ -8,16 +8,16 @@ namespace fruitpal.Logic
 {
     public class FruitCommodityLogic : ICommodityLogic<int, int, List<CostResult>>
     {
-        private IFlatFileData<CountryCommodity> countryCommodityData;
-        private ICalculatorService<CostElement, CostResult> costCalculatorService;
+        private IFlatFileData<CountryCommodity> CountryCommodityData;
+        private ICalculatorService<CostElement, CostResult> CostCalculatorService;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public FruitCommodityLogic()
+        public FruitCommodityLogic(IFlatFileData<CountryCommodity> countryCommodityData, ICalculatorService<CostElement, CostResult> calculatorService)
         {
-            countryCommodityData = new CountryCommodityData();
-            costCalculatorService = new CostCalculatorService();
+            CountryCommodityData = countryCommodityData;
+            CostCalculatorService = calculatorService;
         }
 
         /// <summary>
@@ -31,13 +31,13 @@ namespace fruitpal.Logic
         /// <returns></returns>
         public List<CostResult> GetCommodityPrices(string commodity, int price, int quantity)
         {
-            return countryCommodityData.GetDataMatchingSpecifiedFilter(commodity).Select(countryCommodity => new CostElement() 
+            return CountryCommodityData.GetDataMatchingSpecifiedFilter(commodity).Select(countryCommodity => new CostElement() 
                 { 
                     Price = price,
                     Quantity = quantity,
                     Commodity = countryCommodity
                 })
-            .Select(costElement => costCalculatorService.Calculate(costElement))
+            .Select(costElement => CostCalculatorService.Calculate(costElement))
             .OrderByDescending(costResult => costResult.GrandTotal).ToList();
         }
     }
