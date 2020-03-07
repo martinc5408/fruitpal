@@ -10,5 +10,29 @@
     "COMMODITY": "mango",
     "FIXED_OVERHEAD": "20.00",
     "VARIABLE_OVERHEAD": "1.42"
+  },
+  {
+    "COUNTRY": "DR",
+    "COMMODITY": "banana",
+    "FIXED_OVERHEAD": "23.00",
+    "VARIABLE_OVERHEAD": "1.86"
+  },
+  {
+    "COUNTRY": "DR",
+    "COMMODITY": "cocoa",
+    "FIXED_OVERHEAD": "45.00",
+    "VARIABLE_OVERHEAD": "0.62"
+  },
+  {
+    "COUNTRY": "VZ",
+    "COMMODITY": "banana",
+    "FIXED_OVERHEAD": "35.00",
+    "VARIABLE_OVERHEAD": "1.10"
+  },
+  {
+    "COUNTRY": "CH",
+    "COMMODITY": "cocoa",
+    "FIXED_OVERHEAD": "39.00",
+    "VARIABLE_OVERHEAD": "0.92"
   }
 ] 
