@@ -4,7 +4,8 @@ using System.Text;
 
 namespace fruitpal.Services
 {
-    interface ICalculatorService
+    public interface ICalculatorService<T, K>
     {
+        public K Calculate(T operand);
     }
 }

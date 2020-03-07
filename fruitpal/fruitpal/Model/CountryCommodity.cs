@@ -4,7 +4,7 @@ using System.Text;
 
 namespace fruitpal.Model
 {
-    class CountryCommodity
+    public class CountryCommodity
     {
     }
 }

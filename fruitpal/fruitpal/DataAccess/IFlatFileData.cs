@@ -4,7 +4,8 @@ using System.Text;
 
 namespace fruitpal.DataAccess
 {
-    interface IFlatFileData
+    public interface IFlatFileData<T>
     {
+        public List<T> GetDataMatchingSpecifiedFilter(string filter);
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace fruitpal.Logic
 {
-    interface ICommodityLogic
+    public interface ICommodityLogic<T, K, U>
     {
+        public U GetCommodityPrices(string commodity, T price, K quantity);
     }
 }
