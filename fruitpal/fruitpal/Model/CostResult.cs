@@ -1,7 +1,5 @@
-﻿using System;
-using fruitpal.Constant;
-using System.Collections.Generic;
-using System.Text;
+﻿using fruitpal.Constant;
+using System;
 
 namespace fruitpal.Model
 {

@@ -1,9 +1,8 @@
-﻿using fruitpal.Model;
-using fruitpal.Constant;
+﻿using fruitpal.Constant;
+using fruitpal.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using System.Text;
 using System.IO;
 using System.Linq;
 

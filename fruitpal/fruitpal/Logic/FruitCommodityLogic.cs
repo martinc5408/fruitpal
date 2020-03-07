@@ -1,10 +1,8 @@
 ﻿using fruitpal.DataAccess;
 using fruitpal.Model;
 using fruitpal.Services;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace fruitpal.Logic
 {

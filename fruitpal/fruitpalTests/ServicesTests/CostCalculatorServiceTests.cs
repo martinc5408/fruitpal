@@ -1,9 +1,6 @@
 ﻿using fruitpal.Model;
 using fruitpal.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace fruitpalTests.ServicesTests
 {

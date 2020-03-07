@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace fruitpal.Services
+﻿namespace fruitpal.Services
 {
     public interface ICalculatorService<T, K>
     {

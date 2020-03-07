@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace fruitpal.Logic
+﻿namespace fruitpal.Logic
 {
     public interface ICommodityLogic<T, K, U>
     {

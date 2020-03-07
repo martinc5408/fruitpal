@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace fruitpal.Model
+﻿namespace fruitpal.Model
 {
     public class CostElement
     {

@@ -1,10 +1,9 @@
 ﻿using fruitpal.Logic;
 using fruitpal.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace fruitpalTests.LogicTests
 {
