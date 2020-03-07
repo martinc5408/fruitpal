@@ -33,7 +33,17 @@ namespace fruitpal
             ICommodityLogic<int, int, List<CostResult>> fruitCommodityLogic = new FruitCommodityLogic();
 
             //Call orchestrating business logic and write results
-            fruitCommodityLogic.GetCommodityPrices(commodity, price, quantity).ForEach(Console.WriteLine);
+            List<CostResult> fruitCommodities = fruitCommodityLogic.GetCommodityPrices(commodity, price, quantity);
+
+            if(fruitCommodities.Count > 0)
+            {
+                fruitCommodities.ForEach(Console.WriteLine);
+            }
+            else
+            {
+                Console.WriteLine(Constants.NOT_FOUND_FC);
+            }
+
             return 0;
         }
     }
