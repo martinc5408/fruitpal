@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace fruitpal
 {
-    class Program
+    class FruitPal
     {
         static int Main(string[] args)
         {
