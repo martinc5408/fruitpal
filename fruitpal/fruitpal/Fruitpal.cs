@@ -32,7 +32,7 @@ namespace fruitpal
                 return 1;
             }
 
-            ICommodityLogic<int, int, List<CostResult>> fruitCommodityLogic = new FruitCommodityLogic(new CountryCommodityData(), new CostCalculatorService());
+            ICommodityLogic<int, int, List<CostResult>> fruitCommodityLogic = new FruitCommodityLogic(new CountryCommodityData(new JSONFileReader()), new CostCalculatorService());
 
             //Call orchestrating business logic and write results
             List<CostResult> fruitCommodities = fruitCommodityLogic.GetCommodityPrices(commodity, price, quantity);

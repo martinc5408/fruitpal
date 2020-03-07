@@ -1,6 +1,9 @@
-﻿using fruitpal.DataAccess;
+﻿using fruitpal.Constant;
+using fruitpal.DataAccess;
 using fruitpal.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,11 +13,29 @@ namespace fruitpalTests.DataAccessTests
     public class CountryCommodityDataTests
     {
         private CountryCommodityData countryCommodityData;
+        private Mock<IFileReader> mockReader;
+        private string data;
 
         [TestInitialize]
         public void SetUp()
         {
-            countryCommodityData = new CountryCommodityData();
+            data = @"[
+                        {
+                            'COUNTRY': 'MX',
+                            'COMMODITY': 'mango',
+                            'FIXED_OVERHEAD': '32.00',
+                            'VARIABLE_OVERHEAD': '1.24'
+                        },
+                        {
+                            'COUNTRY': 'BR',
+                            'COMMODITY': 'mango',
+                            'FIXED_OVERHEAD': '20.00',
+                            'VARIABLE_OVERHEAD': '1.42'
+                        }
+                    ]";
+            mockReader = new Mock<IFileReader>();
+            mockReader.Setup(read => read.ReadFile(Environment.CurrentDirectory + Constants.COMMODITIES_PATH)).Returns(data);
+            countryCommodityData = new CountryCommodityData(mockReader.Object);
         }
 
         [TestMethod]

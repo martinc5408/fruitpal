@@ -3,13 +3,19 @@ using fruitpal.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace fruitpal.DataAccess
 {
     public class CountryCommodityData : IFlatFileData<CountryCommodity>
     {
+        private IFileReader FileReader;
+
+        public CountryCommodityData(IFileReader fileReader)
+        {
+            FileReader = fileReader;
+        }
+
         /// <summary>
         /// Retrieves data from stored commodities flat file. 
         /// Parses json and returns filtered List of CountryCommodity.
@@ -19,7 +25,7 @@ namespace fruitpal.DataAccess
         public List<CountryCommodity> GetDataMatchingSpecifiedFilter(string filter)
         {
             return JsonConvert.DeserializeObject<List<CountryCommodityRecord>>(
-                    File.ReadAllText(Environment.CurrentDirectory + Constants.COMMODITIES_PATH))
+                    FileReader.ReadFile(Environment.CurrentDirectory + Constants.COMMODITIES_PATH))
                 .Where(countryCommodity => countryCommodity.Commodity.Equals(filter))
                 .Select(countryCommodityRecord => new CountryCommodity()
                     {
