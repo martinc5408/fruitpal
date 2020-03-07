@@ -9,7 +9,25 @@ namespace fruitpal.Services
     {
         public CostResult Calculate(CostElement operand)
         {
-            throw new NotImplementedException();
+            var totalVariable = operand.VariableOverhead + operand.Price;
+
+            return AsCostResult(
+                (totalVariable * operand.Quantity) + operand.FixedOverhead,
+                totalVariable,
+                operand.FixedOverhead,
+                operand.Quantity);
+
+        }
+
+        private CostResult AsCostResult(double grandTotal, double totalVariable, double fixedOverhead, int quantity)
+        {
+            return new CostResult
+            {
+                GrandTotal = grandTotal,
+                TotalVariable = totalVariable,
+                Fixed = fixedOverhead,
+                Quantity = quantity
+            };
         }
     }
 }

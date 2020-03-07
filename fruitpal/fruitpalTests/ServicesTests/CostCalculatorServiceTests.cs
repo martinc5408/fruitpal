@@ -8,7 +8,7 @@ using System.Text;
 namespace fruitpalTests.ServicesTests
 {
     [TestClass]
-    class CostCalculatorServiceTests
+    public class CostCalculatorServiceTests
     {
         CostCalculatorService costCalculatorService;
 
@@ -31,8 +31,8 @@ namespace fruitpalTests.ServicesTests
 
             CostResult expected = new CostResult
             {
-                GrandTotal = 22060.10,
-                TotalVariable = 54.42,
+                GrandTotal = 21999.20,
+                TotalVariable = 54.24,
                 Fixed = 32.00,
                 Quantity = 405
             };
