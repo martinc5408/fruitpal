@@ -10,6 +10,12 @@ namespace fruitpal.DataAccess
 {
     public class CountryCommodityData : IFlatFileData<CountryCommodity>
     {
+        /// <summary>
+        /// Retrieves data from stored commodities flat file. 
+        /// Parses json and returns filtered List of CountryCommodity.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public List<CountryCommodity> GetDataMatchingSpecifiedFilter(string filter)
         {
             return JsonConvert.DeserializeObject<List<CountryCommodityRecord>>(

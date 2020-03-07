@@ -10,12 +10,14 @@ namespace fruitpal
     {
         static int Main(string[] args)
         {
+            //Args length check
             if(args.Length != 3)
             {
                 Console.WriteLine(Constants.VALID_NO_PARAMETERS);
                 return 1;
             }
 
+            //Parameter initialization and validation
             string commodity = args[0];
             int price, quantity;
 
@@ -30,6 +32,7 @@ namespace fruitpal
 
             ICommodityLogic<int, int, List<CostResult>> fruitCommodityLogic = new FruitCommodityLogic();
 
+            //Call orchestrating business logic and write results
             fruitCommodityLogic.GetCommodityPrices(commodity, price, quantity).ForEach(Console.WriteLine);
             return 0;
         }

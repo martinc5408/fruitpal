@@ -2,6 +2,10 @@
 
 namespace fruitpal.Model
 {
+    /// <summary>
+    /// Model for Country based Commodity data
+    /// with double type cost values.
+    /// </summary>
     public class CountryCommodity
     {
         public string Country { get; set; }

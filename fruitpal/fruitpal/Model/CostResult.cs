@@ -3,6 +3,9 @@ using System;
 
 namespace fruitpal.Model
 {
+    /// <summary>
+    /// Model for cost results by Country.
+    /// </summary>
     public class CostResult
     {
         public string Country { get; set; }

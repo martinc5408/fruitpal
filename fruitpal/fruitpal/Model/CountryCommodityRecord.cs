@@ -2,6 +2,11 @@
 
 namespace fruitpal.Model
 {
+    /// <summary>
+    /// Model for raw Country based Commodity data.
+    /// Contains string cost types as per 3rd-Party data 
+    /// constraint; to be converted to CountryCommodity.
+    /// </summary>
     public class CountryCommodityRecord
     {
         [JsonProperty("COUNTRY")]

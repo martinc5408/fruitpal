@@ -1,5 +1,8 @@
 ﻿namespace fruitpal.Constant
 {
+    /// <summary>
+    /// Constants class
+    /// </summary>
     public static class Constants
     {
         //Resource Locations

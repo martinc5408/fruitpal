@@ -1,5 +1,8 @@
 ﻿namespace fruitpal.Model
 {
+    /// <summary>
+    /// Model for cost calculation.
+    /// </summary>
     public class CostElement
     {
         public int Price { get; set; }
