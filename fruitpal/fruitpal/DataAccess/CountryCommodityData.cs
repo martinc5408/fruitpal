@@ -1,7 +1,10 @@
 ﻿using fruitpal.Model;
+using fruitpal.Constant;
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.Text;
+using System.IO;
 
 namespace fruitpal.DataAccess
 {
@@ -9,23 +12,7 @@ namespace fruitpal.DataAccess
     {
         public List<CountryCommodity> GetDataMatchingSpecifiedFilter(string filter)
         {
-            return new List<CountryCommodity>
-            {
-                new CountryCommodity
-                {
-                    Country = "MX",
-                    Commodity = "mango",
-                    FixedOverhead = "32.00",
-                    VariableOverhead = "1.24"
-                },
-                new CountryCommodity
-                {
-                    Country = "BR",
-                    Commodity = "mango",
-                    FixedOverhead = "20.00",
-                    VariableOverhead = "1.42"
-                }
-            };
+            return JsonConvert.DeserializeObject<List<CountryCommodity>>(File.ReadAllText(Environment.CurrentDirectory + Constants.COMMODITIES_PATH));
         }
     }
 }

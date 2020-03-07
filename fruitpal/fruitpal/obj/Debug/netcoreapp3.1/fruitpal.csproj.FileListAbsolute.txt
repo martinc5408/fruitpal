@@ -4,8 +4,9 @@ C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\bin\Debug\netcoreapp3.1\f
 C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\bin\Debug\netcoreapp3.1\fruitpal.runtimeconfig.dev.json
 C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\bin\Debug\netcoreapp3.1\fruitpal.dll
 C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\bin\Debug\netcoreapp3.1\fruitpal.pdb
-C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\obj\Debug\netcoreapp3.1\fruitpal.csprojAssemblyReference.cache
 C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\obj\Debug\netcoreapp3.1\fruitpal.AssemblyInfoInputs.cache
 C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\obj\Debug\netcoreapp3.1\fruitpal.AssemblyInfo.cs
 C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\obj\Debug\netcoreapp3.1\fruitpal.dll
 C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\obj\Debug\netcoreapp3.1\fruitpal.pdb
+C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\marti\source\repos\fruitpal\fruitpal\fruitpal\obj\Debug\netcoreapp3.1\fruitpal.csproj.CopyComplete
