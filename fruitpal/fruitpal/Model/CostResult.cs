@@ -6,6 +6,7 @@ namespace fruitpal.Model
 {
     public class CostResult
     {
+        public string Country { get; set; }
         public double GrandTotal { get; set; }
         public double TotalVariable { get; set; }
         public double Fixed { get; set; }
@@ -14,6 +15,7 @@ namespace fruitpal.Model
         public override bool Equals(object obj)
         {
             return obj is CostResult result &&
+                   Country == result.Country &&
                    GrandTotal == result.GrandTotal &&
                    TotalVariable == result.TotalVariable &&
                    Fixed == result.Fixed &&
@@ -22,7 +24,7 @@ namespace fruitpal.Model
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(GrandTotal, TotalVariable, Fixed, Quantity);
+            return HashCode.Combine(Country, GrandTotal, TotalVariable, Fixed, Quantity);
         }
     }
 }

@@ -25,12 +25,18 @@ namespace fruitpalTests.ServicesTests
             {
                 Price = 53,
                 Quantity = 405,
-                FixedOverhead = 32.00,
-                VariableOverhead = 1.24
+                Commodity = new CountryCommodity
+                {
+                    Country = "MX",
+                    Commodity = "mango",
+                    FixedOverhead = 32.00,
+                    VariableOverhead = 1.24
+                }
             };
 
             CostResult expected = new CostResult
             {
+                Country = "MX",
                 GrandTotal = 21999.20,
                 TotalVariable = 54.24,
                 Fixed = 32.00,

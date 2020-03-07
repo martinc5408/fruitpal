@@ -29,15 +29,15 @@ namespace fruitpalTests.DataAccessTests
                 {
                     Country = "MX",
                     Commodity = "mango",
-                    FixedOverhead = "32.00",
-                    VariableOverhead = "1.24"
+                    FixedOverhead = 32.00,
+                    VariableOverhead = 1.24
                 },
                 new CountryCommodity
                 {
                     Country = "BR",
                     Commodity = "mango",
-                    FixedOverhead = "20.00",
-                    VariableOverhead = "1.42"
+                    FixedOverhead = 20.00,
+                    VariableOverhead = 1.42
                 }
             };
 

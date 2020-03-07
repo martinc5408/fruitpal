@@ -9,20 +9,23 @@ namespace fruitpal.Services
     {
         public CostResult Calculate(CostElement operand)
         {
-            var totalVariable = operand.VariableOverhead + operand.Price;
+            CountryCommodity commodity = operand.Commodity;
+            var totalVariable = commodity.VariableOverhead + operand.Price;
 
             return AsCostResult(
-                (totalVariable * operand.Quantity) + operand.FixedOverhead,
+                commodity.Country,
+                Math.Round((totalVariable * operand.Quantity) + commodity.FixedOverhead, 2),
                 totalVariable,
-                operand.FixedOverhead,
+                commodity.FixedOverhead,
                 operand.Quantity);
 
         }
 
-        private CostResult AsCostResult(double grandTotal, double totalVariable, double fixedOverhead, int quantity)
+        private CostResult AsCostResult(string country, double grandTotal, double totalVariable, double fixedOverhead, int quantity)
         {
             return new CostResult
             {
+                Country = country,
                 GrandTotal = grandTotal,
                 TotalVariable = totalVariable,
                 Fixed = fixedOverhead,
