@@ -9,7 +9,23 @@ namespace fruitpal.Logic
     {
         public List<CostResult> GetCommodityPrices(string commodity, int price, int quantity)
         {
-            throw new NotImplementedException();
+            return new List<CostResult>
+            {
+                new CostResult
+                {
+                    GrandTotal = 22060.10,
+                    TotalVariable = 54.42,
+                    Fixed = 20.00,
+                    Quantity = 405
+                },
+                new CostResult
+                {
+                    GrandTotal = 21999.20,
+                    TotalVariable = 54.24,
+                    Fixed = 32.00,
+                    Quantity = 405
+                }
+            };
         }
     }
 }

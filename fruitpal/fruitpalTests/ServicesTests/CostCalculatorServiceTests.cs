@@ -10,7 +10,7 @@ namespace fruitpalTests.ServicesTests
     [TestClass]
     public class CostCalculatorServiceTests
     {
-        CostCalculatorService costCalculatorService;
+        private CostCalculatorService costCalculatorService;
 
         [TestInitialize]
         public void SetUp()
