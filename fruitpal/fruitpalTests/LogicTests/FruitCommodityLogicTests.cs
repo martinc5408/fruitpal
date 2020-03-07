@@ -30,18 +30,18 @@ namespace fruitpalTests.LogicTests
             {
                 new CostResult
                 {
-                    Country = "MX",
-                    GrandTotal = 21999.20,
-                    TotalVariable = 54.24,
-                    Fixed = 32.00,
-                    Quantity = 405
-                },
-                new CostResult
-                {
                     Country = "BR",
                     GrandTotal = 22060.10,
                     TotalVariable = 54.42,
                     Fixed = 20.00,
+                    Quantity = 405
+                },
+                new CostResult
+                {
+                    Country = "MX",
+                    GrandTotal = 21999.20,
+                    TotalVariable = 54.24,
+                    Fixed = 32.00,
                     Quantity = 405
                 }
             };

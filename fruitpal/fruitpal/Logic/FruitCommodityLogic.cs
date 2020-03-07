@@ -26,7 +26,9 @@ namespace fruitpal.Logic
                     Price = price,
                     Quantity = quantity,
                     Commodity = countryCommodity
-                }).Select(costElement => costCalculatorService.Calculate(costElement)).ToList();
+                })
+            .Select(costElement => costCalculatorService.Calculate(costElement))
+            .OrderByDescending(costResult => costResult.GrandTotal).ToList();
         }
     }
 }

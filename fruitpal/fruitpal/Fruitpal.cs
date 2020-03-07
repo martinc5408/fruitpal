@@ -1,12 +1,37 @@
-﻿using System;
+﻿using fruitpal.Constant;
+using fruitpal.Logic;
+using fruitpal.Model;
+using System;
+using System.Collections.Generic;
 
 namespace fruitpal
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            if(args.Length != 3)
+            {
+                Console.WriteLine(Constants.VALID_NO_PARAMETERS);
+                return 1;
+            }
+
+            string commodity = args[0];
+            int price, quantity;
+
+            bool isPriceValid = int.TryParse(args[1], out price) && price >= 0;
+            bool isQuantityValid = int.TryParse(args[2], out quantity) && quantity >= 0;
+            
+            if(!isPriceValid || !isQuantityValid)
+            {
+                Console.WriteLine(Constants.VALID_INT_PARAMETERS);
+                return 1;
+            }
+
+            ICommodityLogic<int, int, List<CostResult>> fruitCommodityLogic = new FruitCommodityLogic();
+
+            fruitCommodityLogic.GetCommodityPrices(commodity, price, quantity).ForEach(Console.WriteLine);
+            return 0;
         }
     }
 }
